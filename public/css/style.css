@@ -29,6 +29,7 @@ form {
     align-items: stretch;
     height: 45vh;
     width: 30vw;
+    padding-top: 25vh;
 }
 
 .container {
@@ -51,7 +52,6 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 25vh;
 }
 
 .logo {
@@ -90,6 +90,7 @@ form {
     width: 30vw;
     padding: 10px;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .log-in-input {
