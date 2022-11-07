@@ -1,3 +1,5 @@
+/* Fonts */
+
 @font-face {
     font-family: Poppins;
     src: url(../font/Poppins/Poppins-Regular.ttf);
@@ -15,6 +17,8 @@
     src: url(../font/Poppins/Poppins-SemiBold.ttf);
     font-weight: 600;
 }
+
+/* General */
 
 body {
     margin: 0;
@@ -70,9 +74,11 @@ nav>div>a {
 .small-button {
     border: 1px solid #6FAB87;
     border-radius: 22px;
+    background-color: white;
     width: 8vw;
     padding: 10px;
     color: #000000;
+    font-size: 100%;
 }
 
 .container {
@@ -81,6 +87,11 @@ nav>div>a {
     display: flex;
     flex-direction: row;
 }
+
+/* Special */
+
+
+/* Login */
 
 .container-main-page {
     width: 100vw;
@@ -274,4 +285,31 @@ nav>div>a {
     text-align: center;
     font-weight: 500;
     margin: 1em 2em;
+}
+
+.who-we-are {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    background-image: url('../img/mainpage-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.who-we-are>h1{
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.who-we-are>p{
+    color: #FFFFFF;
+    font-size: 1.5em;
+    width: 70%;
+    text-align: center;
 }
