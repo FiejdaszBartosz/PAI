@@ -81,17 +81,267 @@ nav>div>a {
     font-size: 100%;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
+
 
 /* Special */
 
 
 /* Login */
+
+
+@media (max-width: 759px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+        height: 100%;
+        width: 100vw;
+    }
+    
+    .left-side {
+        /* top side */
+        background-image: url('../img/Rectangle\ 38.png');
+        width: 100vw;
+        height: 30vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .right-side {
+        /* botom side */
+        width: 80vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .logo>img {
+        position: fixed;
+        top: 1.5vh;
+        left: 1.5vw;
+    }
+    
+    .log-in-p {
+        font-size: 2em;
+        font-weight: bold;
+        align-self: center;
+        color: #6FAB87;
+        margin: 0;
+    }
+    
+    .input-with-title {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .upper-label {
+        margin: 0.5em;
+    }
+    
+    .register-with-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .log-in-button {
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%);
+        border-radius: 30px;
+        width: 80vw;
+        padding: 10px;
+        font-weight: 600;
+        margin-top: 1em;
+        color: #fff;
+    }
+    
+    .log-in-input {
+        background: rgba(139, 162, 154, 0.3);
+        border-radius: 30px;
+        padding: 10px;
+    }
+}
+
+
+@media (min-width: 760px) and (max-width: 1799px){
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+        height: 45vh;
+        width: 30vw;
+        padding-top: 25vh;
+    }
+    
+    .left-side {
+        background-image: url('../img/Rectangle\ 38.png');
+        width: 50vw;
+        height: 100vh;
+        background-size: cover;
+    }
+    
+    .right-side {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .logo>img {
+        position: fixed;
+        top: 1.5vh;
+        left: 1.5vw;
+    }
+    
+    .log-in-p {
+        font-size: 2.5em;
+        font-weight: bold;
+        align-self: flex-start;
+    }
+    
+    .input-with-title {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .upper-label {
+        margin: 5px;
+    }
+    
+    .register-with-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    
+    }
+    
+    .log-in-button {
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%);
+        border-radius: 30px;
+        width: 30vw;
+        padding: 10px;
+        font-weight: 600;
+        margin-top: 1em;
+        color: #000000;
+    }
+    
+    .log-in-input {
+        background: rgba(139, 162, 154, 0.3);
+        border-radius: 30px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1800px){
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+        height: 45vh;
+        width: 30vw;
+        padding-top: 25vh;
+    }
+    
+    .left-side {
+        background-image: url('../img/Rectangle\ 38.png');
+        width: 50vw;
+        height: 100vh;
+        background-size: cover;
+    }
+    
+    .right-side {
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .logo>img {
+        position: fixed;
+        top: 5vh;
+        left: 3vw;
+        width: 10%;
+        height: auto;
+    }
+    
+    
+    .log-in-p {
+        font-size: 3em;
+        font-weight: bold;
+        align-self: flex-start;
+    }
+    
+    .input-with-title {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+    
+    .upper-label {
+        margin: 0.5em;
+    }
+    
+    .register-with-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 1.5em;
+    }
+    
+    .log-in-button {
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%);
+        border-radius: 30px;
+        width: 30vw;
+        padding: 20px;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: #000000;
+    }
+    
+    .log-in-input {
+        background: rgba(139, 162, 154, 0.3);
+        border-radius: 30px;
+        padding: 20px;
+        font-size: 1em;
+    }
+}
+
+
+
+
+/* main page */
 
 .container-main-page {
     width: 100vw;
@@ -100,81 +350,11 @@ nav>div>a {
     flex-direction: column;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    height: 45vh;
-    width: 30vw;
-    padding-top: 25vh;
-}
-
-.left-side {
-    background-image: url('../img/Rectangle\ 38.png');
-    width: 50vw;
-    height: 100vh;
-    background-size: cover;
-}
-
-.right-side {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.logo {
-    position: fixed;
-    top: 1.5vh;
-    left: 1.5vw;
-}
-
 .logo-nav {
     margin-top: 1em;
     position: absolute;
     left: 0;
     margin-left: 2.5em;
-}
-
-.log-in-p {
-    font-size: 32px;
-    font-weight: bold;
-    align-self: flex-start;
-}
-
-.input-with-title {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.upper-label {
-    margin: 5px;
-}
-
-.register-with-link {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-
-.log-in-button {
-    background: linear-gradient(90deg, #6FAB87 0%, #356548 100%);
-    border-radius: 30px;
-    width: 30vw;
-    padding: 10px;
-    font-weight: 600;
-    color: #000000;
-}
-
-.log-in-input {
-    background: rgba(139, 162, 154, 0.3);
-    border-radius: 30px;
-    padding: 10px;
 }
 
 .nav-links {
