@@ -40,7 +40,12 @@ nav {
     justify-content: end;
     background-color: #6FAB87;
     width: 100vw;
-    height: 10vh;
+    height: 22vh;
+}
+
+nav>div>img {
+    height: 80%;
+    width: auto;
 }
 
 a {
@@ -948,5 +953,167 @@ nav>div>a {
         width: calc(100vw - 2em);
         height: 10vh;
         padding: 0 0 2em 2em;
+    }
+}
+
+/* profile */
+@media (max-width: 759px) {
+    .profile-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .profile-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%), #6FAB87;
+        height: 20vh;
+        width: 100%;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 15vh;
+        width: 40vw;
+    }
+
+    .profile-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .profile-img>img {
+        border-radius: 50%;
+        position: absolute;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .profile-info>h1 {
+        color: #ffffff;
+        
+    }
+
+    .container-main-page>h1 {
+        margin: 1em;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1799px) {
+    .profile-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .profile-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%), #6FAB87;
+        height: 25vh;
+        width: 100%;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width: 40vw;
+    }
+
+    .profile-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .profile-img>img {
+        border-radius: 50%;
+        position: absolute;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .profile-info>h1 {
+        color: #ffffff;
+        
+    }
+
+    .container-main-page>h1 {
+        margin: 1em;
+    }
+
+}
+
+@media (min-width: 1800px) {
+    .profile-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .profile-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(90deg, #6FAB87 0%, #356548 100%), #6FAB87;
+        height: 25vh;
+        width: 100%;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+        width: 40vw;
+    }
+
+    .profile-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .profile-img>img {
+        border-radius: 50%;
+        position: absolute;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .profile-info>h1 {
+        color: #ffffff;
+        margin-top: 1.5em;
+        font-size: 4em;
+    }
+
+    .container-main-page>h1 {
+        margin: 1em;
     }
 }
