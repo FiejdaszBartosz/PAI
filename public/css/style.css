@@ -421,7 +421,7 @@ nav>div>a {
     .logo-nav>img {
         margin-left: 1em;
         position: absolute;
-        left: 0;   
+        left: 0;
         width: 17vw;
         height: auto;
     }
@@ -484,21 +484,22 @@ nav>div>a {
         justify-content: stretch;
     }
 
-    .dropdown-form>div>p {
+    .dropdown-with-title>p {
         font-weight: 500;
         color: #6FAB87;
     }
 
-    .dropdown-form>div>input {
+    .dropdown-with-title>input {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 0.5em;
     }
 
-    .dropdown-form>div>select {
+    .dropdown-with-title>select {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 0.5em;
+        width: 50%;
     }
 
     .dropdown-form>button {
@@ -654,21 +655,22 @@ nav>div>a {
         justify-content: space-around;
     }
 
-    .dropdown-form>div>p {
+    .dropdown-with-title>p {
         font-weight: 500;
         color: #6FAB87;
     }
 
-    .dropdown-form>div>input {
+    .dropdown-with-title>input {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 0.5em;
     }
 
-    .dropdown-form>div>select {
+    .dropdown-with-title>select {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 0.5em;
+        width: 7vw;
     }
 
     .dropdown-form>button {
@@ -817,23 +819,24 @@ nav>div>a {
         justify-content: space-around;
     }
 
-    .dropdown-form>div>p {
+    .dropdown-with-title>p {
         font-weight: 500;
         font-size: 1.4em;
         color: #6FAB87;
     }
 
-    .dropdown-form>div>input {
+    .dropdown-with-title>input {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 1em;
         width: 13vw;
     }
 
-    .dropdown-form>div>select {
+    .dropdown-with-title>select {
         background: rgba(139, 162, 154, 0.3);
         border-radius: 30px;
         padding: 0.5em;
+        width: 10vw;
     }
 
     .dropdown-form>button {
@@ -911,5 +914,39 @@ nav>div>a {
         font-size: 1.7em;
         width: 70%;
         text-align: center;
+    }
+}
+
+/* oferts */
+@media (max-width: 759px) {
+    .filter {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: calc(100vw - 2em);
+        height: 40vh;
+        padding: 0 0 2em 2em;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1799px) {
+    .filter {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: calc(100vw - 2em);
+        height: 10vh;
+        padding: 0 0 2em 2em;
+    }
+}
+
+@media (min-width: 1800px) {
+    .filter {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: calc(100vw - 2em);
+        height: 10vh;
+        padding: 0 0 2em 2em;
     }
 }
