@@ -14,8 +14,8 @@
                 <img src="public/img/logo.svg" alt="logo">
             </div>
             <div class="nav-links">
-                <a href="oferts.html">oferty</a>
-                <a href="login.html">zaloguj</a>
+                <a href="oferts.php">oferty</a>
+                <a href="login.php">zaloguj</a>
             </div>
         </nav>
         <div class="about-house-container">
