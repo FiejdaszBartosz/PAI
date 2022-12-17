@@ -14,7 +14,8 @@
                     <img src="public/img/logo.svg" alt="logo">
                 </div>
                 <div class="nav-links">
-                    <a href="oferts">oferty</a>
+                    <a href="offers">oferty</a>
+                    <a href="addOffer">dodaj ogłoszenie</a>
                     <a href="login">zaloguj</a>
                 </div>
             </nav>

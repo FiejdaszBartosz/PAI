@@ -14,8 +14,16 @@
             </div>
         </div>
         <div class="right-side">
-            <form class="login-form">
+            <form class="login-form" action="login" method="POST">
                 <p class="log-in-p">Zaloguj się</p>
+                <div class="message">
+                    <?php if (isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <div class="input-with-title">
                     <p class="upper-label">Login</p>
                     <input class="log-in-input" name="email" type="text" placeholder="email@email.com">
@@ -24,7 +32,7 @@
                     <p class="upper-label">Hasło</p>
                     <input class="log-in-input" name="password" type="password" placeholder="password">
                 </div>
-                <button class="log-in-button">Zaloguj się</button>
+                <button class="log-in-button" type="submit">Zaloguj się</button>
                 <div class="register-with-link">
                     <p>Nie masz konta?</p>
                     <a href="">Zarejestruj sie</a>

@@ -12,4 +12,29 @@ class DefaultController extends AppController {
     {
         $this->render('login');  
     }
+
+    public function offers()
+    {
+        $this->render('offers');
+    }
+
+    public function offerDetails()
+    {
+        $this->render('offer-details');
+    }
+
+    public function profile()
+    {
+        $this->render('profile');
+    }
+
+    public function addOffer()
+    {
+        $this->render('add-offer');
+    }
+
+    public function register()
+    {
+        $this->render('register');
+    }
 }

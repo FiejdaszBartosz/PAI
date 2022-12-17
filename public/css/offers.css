@@ -1,5 +1,5 @@
 @media (max-width: 759px) {
-    .oferts-grid {
+    .offers-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 1em;
@@ -8,14 +8,14 @@
         height: 80vh;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         border-radius: 25px 25px 0px 0px;
         width: 70vw;
         height: 45vh;
         margin: auto;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -25,32 +25,32 @@
         border-radius: 25px;
     }
 
-    .oferts-grid>div>img {
+    .offers-grid>div>img {
         width: 100%;
         height: 60%;
         object-fit: cover;
         border-radius: 1em 1em 0 0;
     }
 
-    .oferts-grid>div>div>h1 {
+    .offers-grid>div>div>h1 {
         text-align: center;
     }
 
-    .single-ofert-activities {
+    .single-offer-activities {
         width: 60vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    .single-ofert-activities>i {
+    .single-offer-activities>i {
         font-size: 2em;
     }
 }
 
 
 @media (min-width: 760px) and (max-width: 1799px) {
-    .oferts-grid {
+    .offers-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
@@ -59,14 +59,14 @@
         height: 80vh;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         border-radius: 25px 25px 0px 0px;
         width: 20vw;
         height: 25vh;
         margin: auto;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -76,31 +76,31 @@
         border-radius: 25px;
     }
 
-    .oferts-grid>div>img {
+    .offers-grid>div>img {
         width: 100%;
         height: 70%;
         object-fit: cover;
         border-radius: 1em 1em 0 0;
     }
 
-    .oferts-grid>div>div>h1 {
+    .offers-grid>div>div>h1 {
         text-align: center;
     }
 
-    .single-ofert-activities {
+    .single-offer-activities {
         width: 15vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    .single-ofert-activities>i {
+    .single-offer-activities>i {
         font-size: 2em;
     }
 }
 
 @media (min-width: 1800px) {
-    .oferts-grid {
+    .offers-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
@@ -109,14 +109,14 @@
         height: 80vh;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         border-radius: 25px 25px 0px 0px;
         width: 20vw;
         height: 25vh;
         margin: auto;
     }
 
-    .oferts-grid>div {
+    .offers-grid>div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,18 +126,18 @@
         border-radius: 25px;
     }
 
-    .oferts-grid>div>img {
+    .offers-grid>div>img {
         width: 100%;
         height: 70%;
         object-fit: cover;
         border-radius: 1em 1em 0 0;
     }
 
-    .oferts-grid>div>div>h1 {
+    .offers-grid>div>div>h1 {
         text-align: center;
     }
 
-    .single-ofert-activities {
+    .single-offer-activities {
         width: 15vw;
         display: flex;
         align-items: center;
@@ -145,7 +145,7 @@
         margin-bottom: 1.2em;
     }
 
-    .single-ofert-activities>i {
+    .single-offer-activities>i {
         font-size: 2em;
     }
 }

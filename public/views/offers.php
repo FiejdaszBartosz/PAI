@@ -3,9 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/offerts.css">
+    <link rel="stylesheet" href="public/css/offers.css">
     <script src="https://kit.fontawesome.com/ebcb7e8a33.js" crossorigin="anonymous"></script>
-    <title>offertS</title>
+    <title>offerS</title>
 </head>
 
 <body>
@@ -31,52 +31,52 @@
                 </select>
             </div>
         </form>
-        <section class="offerts-grid">
-            <div id="single-offert1">
-                <img src="public/img/offerts.jpg" alt="img">
+        <section class="offers-grid">
+            <div id="single-offer1">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-offert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                 </div>
             </div>
-            <div id="single-offert2">
-                <img src="public/img/offerts.jpg" alt="img">
+            <div id="single-offer2">
+                <img src="public/uploads/<?= $offer->getImage() ?>" alt="img">
                 <div>
-                    <h1>Some title</h1>
-                    <div class="single-offert-activities">
+                    <h1><?= $offer->getTitle() ?></h1>
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                 </div>
             </div>
-            <div id="single-offert3">
-                <img src="public/img/offerts.jpg" alt="img">
+            <div id="single-offer3">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-offert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                 </div>
             </div>
-            <div id="single-offert4">
-                <img src="public/img/offerts.jpg" alt="img">
+            <div id="single-offer4">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-offert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                 </div>
             </div>

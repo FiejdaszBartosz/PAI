@@ -23,6 +23,11 @@ class SecurityController extends  AppController
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
+
+        // set cookie
+        setcookie("user_name", $user->getName(), time()+ 120,'/');
+        //setcookie("user_role", $user->getName(), time()+ 120,'/');
+
         return $this->render('main-page');
 
     }

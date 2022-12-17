@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/oferts.css">
+    <link rel="stylesheet" href="public/css/offers.css">
     <title>PROFILE</title>
 </head>
 
@@ -25,12 +25,12 @@
             </div>
         </div>
         <h1>Odwiedził</h1>
-        <section class="oferts-grid">
-            <div id="single-ofert1">
-                <img src="public/img/oferts.jpg" alt="img">
+        <section class="offers-grid">
+            <div id="single-offer1">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-ofert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
@@ -38,11 +38,11 @@
                     </div>
                 </div>
             </div>
-            <div id="single-ofert2">
-                <img src="public/img/oferts.jpg" alt="img">
+            <div id="single-offer2">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-ofert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
@@ -50,11 +50,11 @@
                     </div>
                 </div>
             </div>
-            <div id="single-ofert3">
-                <img src="public/img/oferts.jpg" alt="img">
+            <div id="single-offer3">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-ofert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
@@ -62,11 +62,11 @@
                     </div>
                 </div>
             </div>
-            <div id="single-ofert4">
-                <img src="public/img/oferts.jpg" alt="img">
+            <div id="single-offer4">
+                <img src="public/img/offer.jpg" alt="img">
                 <div>
                     <h1>Some title</h1>
-                    <div class="single-ofert-activities">
+                    <div class="single-offer-activities">
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>

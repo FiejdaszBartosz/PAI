@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <head>
-    <title>OFERT-DETAILS</title>
+    <title>offer-DETAILS</title>
     <link rel="stylesheet" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/ebcb7e8a33.js" crossorigin="anonymous"></script>
 </head>
@@ -14,13 +14,13 @@
                 <img src="public/img/logo.svg" alt="logo">
             </div>
             <div class="nav-links">
-                <a href="oferts.php">oferty</a>
-                <a href="login.php">zaloguj</a>
+                <a href="offers">oferty</a>
+                <a href="login">zaloguj</a>
             </div>
         </nav>
         <div class="about-house-container">
             <div class="about-house">
-                <img src="public/img/oferts-details.jpg" alt="house-img">
+                <img src="public/img/offer-details.jpg" alt="house-img">
                 <div>
                     <div>
                         <h1>Dom w sercu Sardyni</h1>
@@ -46,10 +46,10 @@
                         <i class="fa-solid fa-paw"></i>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                     <div>
-                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                         <p>7 osób</p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <div>
                         <i class="fa-solid fa-seedling"></i>
                         <i class="fa-solid fa-broom"></i>
-                        <i class="fa-regular fa-house-chimney-user"></i>
+                        <i class="fa-solid fa-house-chimney-user"></i>
                     </div>
                 </div>
             </div>
