@@ -15,6 +15,20 @@ class SecurityController extends  AppController
         $email = $_POST['email'];
         $password = $_POST['password'];
 
+        if (empty($email)) {
+            return $this->render('login', ['messages' => ['Nie wpisano loginu']]);
+        } else {
+            $pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^";
+            if (!preg_match ($pattern, $email) ) {
+                return $this->render('login', ['messages' => ['NIepoprawny format emaila']]);
+            }
+        }
+
+        if (empty($password)) {
+            return $this->render('login', ['messages' => ['Nie wpisano hasla']]);
+        }
+
+
         if ($user->getEmail() !== $email) {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
