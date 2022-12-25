@@ -5,6 +5,10 @@ require_once __DIR__.'/../models/User.php';
 
 class SecurityController extends  AppController
 {
+    private function checkPassword($input, $hash) : bool {
+        return password_verify($input, $hash);
+    }
+
     public function login() {
         $user = new User('test@test.pl', 'admin', 'John', 'Snow');
 
@@ -33,7 +37,7 @@ class SecurityController extends  AppController
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if ($this->checkPassword($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 

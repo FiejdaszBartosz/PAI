@@ -12,6 +12,10 @@ class RegisterController extends AppController
         return $data;
     }
 
+    private function hashPassword($data) : string {
+        return password_hash($data, PASSWORD_BCRYPT);
+    }
+
     public function register() {
         if (!$this->isPost()) {
             return $this->render('register');
@@ -51,6 +55,8 @@ class RegisterController extends AppController
         if (empty($password)) {
             return $this->render('register', ['messages' => ['Nie wpisano hasla']]);
         }
+
+        $hash = $this->hashPassword($password);
 
 
 
