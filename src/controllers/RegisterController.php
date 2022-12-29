@@ -60,7 +60,7 @@ class RegisterController extends AppController
 
 
 
-        return $this->render('register', ['messages' => [$name, $surname, $email, $password]]);
+        return $this->render('register', ['messages' => [$name, $surname, $email, $password, '\n', $hash]]);
 
 
 
