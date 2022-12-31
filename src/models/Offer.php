@@ -11,6 +11,7 @@ class Offer
     private $availableFrom;
     private $availableTo;
     private $offerDescription;
+    private $requirementsDescription;
     private $image;
 
     public function __construct(
@@ -23,6 +24,7 @@ class Offer
         , $availableFrom
         , $availableTo
         , $offerDescription
+        , $requirementsDescription
         , $image)
     {
         $this->title = $title;
@@ -34,6 +36,7 @@ class Offer
         $this->availableFrom = $availableFrom;
         $this->availableTo = $availableTo;
         $this->offerDescription = $offerDescription;
+        $this->requirementsDescription = $requirementsDescription;
         $this->image = $image;
     }
 
@@ -135,5 +138,15 @@ class Offer
     public function setImage(string $image)
     {
         $this->image = $image;
+    }
+
+    public function getRequirementsDescription()
+    {
+        return $this->requirementsDescription;
+    }
+
+    public function setRequirementsDescription($requirementsDescription): void
+    {
+        $this->requirementsDescription = $requirementsDescription;
     }
 }
