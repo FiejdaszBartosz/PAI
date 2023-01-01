@@ -35,4 +35,40 @@ class OfferRepository extends Repository
             $offer['img']
         );
     }
+
+    public function addOffer(Offer $offer) : void {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO offer (
+                               offer_user_id,
+                               title,
+                               description,
+                               avaible_from,
+                               avaible_to,
+                               requirements_description,
+                               img,
+                               localisation,
+                               animals,
+                               plants,
+                               cleaning,
+                               house_care)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ');
+
+        $id_user = 1;
+
+        $stmt->execute([
+            $id_user,
+            $offer->getTitle(),
+            $offer->getOfferDescription(),
+            $offer->getAvailableFrom()->format('Y-m-d'),
+            $offer->getAvailableTo()->format('Y-m-d'),
+            $offer->getRequirementsDescription(),
+            $offer->getImage(),
+            $offer->getLocalization(),
+            $offer->getAnimals(),
+            $offer->getPlants(),
+            $offer->getCleaning(),
+            $offer->getHouseCare(),
+        ]);
+    }
 }
