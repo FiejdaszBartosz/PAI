@@ -27,6 +27,7 @@ class Offer
         , $requirementsDescription
         , $image)
     {
+        echo $animals;
         $this->title = $title;
         $this->localization = $localization;
         $this->animals = $animals;
@@ -60,9 +61,12 @@ class Offer
         $this->localization = $localization;
     }
 
-    public function getAnimals() : bool
+    public function getAnimals()
     {
-        return $this->animals;
+        if ($this->animals == "")
+            return 0;
+        else
+            return $this->animals;
     }
 
     public function setAnimals(bool $animals)
@@ -70,9 +74,12 @@ class Offer
         $this->animals = $animals;
     }
 
-    public function getPlants() : bool
+    public function getPlants()
     {
-        return $this->plants;
+        if ($this->plants == "")
+            return 0;
+        else
+            return $this->plants;
     }
 
     public function setPlants(bool $plants)
@@ -80,9 +87,12 @@ class Offer
         $this->plants = $plants;
     }
 
-    public function getCleaning() : bool
+    public function getCleaning()
     {
-        return $this->cleaning;
+        if ($this->cleaning == "")
+            return 0;
+        else
+            return $this->cleaning;
     }
 
     public function setCleaning(bool $cleaning)
@@ -90,9 +100,12 @@ class Offer
         $this->cleaning = $cleaning;
     }
 
-    public function getHouseCare() : bool
+    public function getHouseCare()
     {
-        return $this->houseCare;
+        if ($this->houseCare == "")
+            return 0;
+        else
+            return $this->houseCare;
     }
 
     public function setHouseCare(bool $houseCare)

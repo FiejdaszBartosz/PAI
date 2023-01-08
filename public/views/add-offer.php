@@ -45,21 +45,25 @@
                     <div class="requirements-add">
                         <div>
                             <i class="fa-solid fa-paw"></i>
-                            <input type="checkbox" name="animals" value="tak">
+                            <input type="checkbox" name="animals" value="true">
                         </div>
                         <div>
                             <i class="fa-solid fa-seedling"></i>
-                            <input type="checkbox" name="plants" value="tak">
+                            <input type="checkbox" name="plants" value="true">
                         </div>
                         <div>
                             <i class="fa-solid fa-broom"></i>
-                            <input type="checkbox" name="cleaning" value="tak">
+                            <input type="checkbox" name="cleaning" value="true">
                         </div>
                         <div>
                             <i class="fa-solid fa-house-chimney-user"></i>
-                            <input type="checkbox" name="houseCare" value="tak">
+                            <input type="checkbox" name="houseCare" value="true">
                         </div>
                     </div>
+                </div>
+                <div class="description">
+                    <p>Opis wymagań</p>
+                    <textarea name="requirementsDescription" rows="5" placeholder="opis wymagań"></textarea>
                 </div>
                 <div>
                     <p>Lokalizacja</p>
@@ -79,7 +83,7 @@
                     <div class="addImgBox"></div>
                     <input name="file" type="file" placeholder="dodaj zdjecie"></input>
                 </div>
-                <button class="medium-color-button" type="submit">Dodaj</button>
+                <button class="medium-color-button" type="submit", name="submit">Dodaj</button>
             </form>
         </div>
     </div>
