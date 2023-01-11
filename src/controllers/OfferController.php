@@ -4,7 +4,7 @@ require_once 'AppController.php';
 require_once __DIR__ . '/../models/Offer.php';
 require_once __DIR__ . '/../repository/OfferRepository.php';
 
-class AddOfferController extends AppController
+class OfferController extends AppController
 {
     const MAX_FILE_SIZE = 1024 * 1024;
     const SUPPORTED_TYPES = ['image/png', 'image/jpg'];
@@ -16,6 +16,19 @@ class AddOfferController extends AppController
     {
         parent::__construct();
         $this->offerRepository = new OfferRepository();
+    }
+
+    public function offers()
+    {
+        $offers = $this->offerRepository->getOffers();
+        $this->render('offers', ['offers' => $offers]);
+    }
+
+    public function singleOffer()
+    {
+        $id = $_GET['offer_id'];
+        $offers = $this->offerRepository->getOffer($id);
+        $this->render('offer-details', ['offers' => $offers]);
     }
 
     public function addOffer()
@@ -67,8 +80,6 @@ class AddOfferController extends AppController
                 $availableTo = DateTime::createFromFormat('d-m-Y', '01-01-2023')->format('Y-m-d');;
             }
 
-            //echo $animals, $cleaning, $plants, $houseCare;
-
             $offer = new Offer(
                 $_POST['title']
                 , $_POST['localization']
@@ -80,12 +91,15 @@ class AddOfferController extends AppController
                 , $availableTo
                 , $_POST['offerDescription']
                 , $_POST['requirementsDescription']
-                , $_FILES['file']['name']);
+                , $_FILES['file']['name']
+                , 1);
 
             $this->offerRepository->addOffer($offer);
 
 
-            return $this->render('offers', ['messages' => $this->message, 'offer' => $offer]);
+            return $this->render('offers', [
+                'messages' => $this->message,
+                'offers' => $this->offerRepository->getOffers()]);
         }
 
         return $this->render('add-offer', ['messages' => $this->message]);

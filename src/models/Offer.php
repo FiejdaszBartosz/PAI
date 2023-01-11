@@ -13,6 +13,7 @@ class Offer
     private $offerDescription;
     private $requirementsDescription;
     private $image;
+    private $userId;
 
     public function __construct(
         $title
@@ -25,9 +26,9 @@ class Offer
         , $availableTo
         , $offerDescription
         , $requirementsDescription
-        , $image)
+        , $image
+        , $userId)
     {
-        echo $animals;
         $this->title = $title;
         $this->localization = $localization;
         $this->animals = $animals;
@@ -39,6 +40,7 @@ class Offer
         $this->offerDescription = $offerDescription;
         $this->requirementsDescription = $requirementsDescription;
         $this->image = $image;
+        $this->userId = $userId;
     }
 
     public function getTitle() : string
@@ -161,5 +163,15 @@ class Offer
     public function setRequirementsDescription($requirementsDescription): void
     {
         $this->requirementsDescription = $requirementsDescription;
+    }
+
+    public function getUserId() : int
+    {
+        return $this->userId;
+    }
+
+    public function setUserId(int $userId)
+    {
+        $this->userId = $userId;
     }
 }

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/offers.css">
     <script src="https://kit.fontawesome.com/ebcb7e8a33.js" crossorigin="anonymous"></script>
-    <title>offerS</title>
+    <title>offers</title>
 </head>
 
 <body>
@@ -31,55 +31,42 @@
                 </select>
             </div>
         </form>
-        <section class="offers-grid">
-            <div id="single-offer1">
-                <img src="public/img/offer.jpg" alt="img">
+        <section class="offers">
+            <?php foreach ($offers as $singleOffer): ?>
+            <div id="singleOffer">
+                <img src="public/uploads/<? print_r($singleOffer->getImage()); ?>" alt="img">
                 <div>
-                    <h1>Some title</h1>
-                    <div class="single-offer-activities">
-                        <i class="fa-solid fa-paw"></i>
-                        <i class="fa-solid fa-seedling"></i>
-                        <i class="fa-solid fa-broom"></i>
-                        <i class="fa-solid fa-house-chimney-user"></i>
+                    <h1><? print_r($singleOffer->getTitle()); ?></h1>
+                    <div class="singleOfferActivities">
+                        <?
+                            if ($singleOffer->getAnimals()) {
+                                echo "<i class='fa-solid fa-paw' style='color:green;'></i>";
+                            } else {
+                                echo "<i class='fa-solid fa-paw'></i>";
+                            }
+
+                            if ($singleOffer->getPlants()) {
+                                echo "<i class='fa-solid fa-seedling' style='color:green;'></i>";
+                            } else {
+                                echo "<i class='fa-solid fa-seedling'></i>";
+                            }
+
+                            if ($singleOffer->getCleaning()) {
+                                echo "<i class='fa-solid fa-broom' style='color:green;'></i>";
+                            } else {
+                                echo "<i class='fa-solid fa-broom'></i>";
+                            }
+
+                            if ($singleOffer->getHouseCare()) {
+                                echo "<i class='fa-solid fa-house-chimney-user' style='color:green;'></i>";
+                            } else {
+                                echo "<i class='fa-solid fa-house-chimney-user'></i>";
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
-            <div id="single-offer2">
-                <img src="public/uploads/<?= $offer->getImage() ?>" alt="img">
-                <div>
-                    <h1><?= $offer->getTitle() ?></h1>
-                    <div class="single-offer-activities">
-                        <i class="fa-solid fa-paw"></i>
-                        <i class="fa-solid fa-seedling"></i>
-                        <i class="fa-solid fa-broom"></i>
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="single-offer3">
-                <img src="public/img/offer.jpg" alt="img">
-                <div>
-                    <h1>Some title</h1>
-                    <div class="single-offer-activities">
-                        <i class="fa-solid fa-paw"></i>
-                        <i class="fa-solid fa-seedling"></i>
-                        <i class="fa-solid fa-broom"></i>
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                    </div>
-                </div>
-            </div>
-            <div id="single-offer4">
-                <img src="public/img/offer.jpg" alt="img">
-                <div>
-                    <h1>Some title</h1>
-                    <div class="single-offer-activities">
-                        <i class="fa-solid fa-paw"></i>
-                        <i class="fa-solid fa-seedling"></i>
-                        <i class="fa-solid fa-broom"></i>
-                        <i class="fa-solid fa-house-chimney-user"></i>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </section>
     </div>
 </body>

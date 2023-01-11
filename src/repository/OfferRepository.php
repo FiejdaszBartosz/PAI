@@ -7,7 +7,6 @@ require_once __DIR__.'/../models/Offer.php';
 
 class OfferRepository extends Repository
 {
-
     public function getOffer(int $id): ?Offer {
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.offer WHERE id = :id_offer
@@ -32,7 +31,8 @@ class OfferRepository extends Repository
             $offer['$available_to'],
             $offer['description'],
             $offer['requirements_description'],
-            $offer['img']
+            $offer['img'],
+            $offer['offer_user_id']
         );
     }
 
@@ -71,5 +71,35 @@ class OfferRepository extends Repository
             $offer->getCleaning(),
             $offer->getHouseCare(),
         ]);
+    }
+
+    public function getOffers() : array {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM offers
+        ');
+
+        $stmt->execute();
+        $offers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($offers as $offer) {
+            $result[] = new Offer(
+                $offer['title'],
+                $offer['localisation'],
+                $offer['animals'],
+                $offer['plants'],
+                $offer['cleaning'],
+                $offer['house_care'],
+                $offer['available_from'],
+                $offer['available_to'],
+                $offer['description'],
+                $offer['requirements_description'],
+                $offer['img'],
+                $offer['offer_user_id']
+            );
+        }
+
+        return $result;
     }
 }

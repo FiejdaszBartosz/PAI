@@ -13,11 +13,6 @@ class DefaultController extends AppController {
         $this->render('login');  
     }
 
-    public function offers()
-    {
-        $this->render('offers');
-    }
-
     public function offerDetails()
     {
         $this->render('offer-details');

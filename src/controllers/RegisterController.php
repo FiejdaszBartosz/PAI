@@ -56,16 +56,7 @@ class RegisterController extends AppController
             return $this->render('register', ['messages' => ['Nie wpisano hasla']]);
         }
 
-        $hash = $this->hashPassword($password);
-
-
-
-        return $this->render('register', ['messages' => [$name, $surname, $email, $password, '\n', $hash]]);
-
-
-
-        //return $this->render('main-page');
-
+        return $this->render('main-page');
     }
 
 
