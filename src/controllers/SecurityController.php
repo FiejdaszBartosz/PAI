@@ -52,8 +52,8 @@ class SecurityController extends  AppController
 
 
         // set cookie
-        setcookie("user_name", $user->getName(), time()+ 120,'/');
-        setcookie("is_admin", $user->getIsAdmin(), time()+ 120,'/');
+        setcookie("user_name", $user->getEmail(), time()+ 360,'/');
+        setcookie("is_admin", $user->getIsAdmin(), time()+ 360,'/');
 
         return $this->render('main-page');
 

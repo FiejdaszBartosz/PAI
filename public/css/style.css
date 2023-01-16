@@ -1178,13 +1178,22 @@ a {
         align-items: center;
     }
 
-    .about-house>img {
-        width: 80vw;
-        height: auto;
+    .about-house-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85vw;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .about-house-img-container>img {
+        height: 90%;
+        width: 90%;
         object-fit: contain;
     }
 
-    .about-house>div {
+    .about-house>div:last-child {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -1195,6 +1204,7 @@ a {
 
     .about-house>div>div>h1 {
         font-size: 1.7em;
+        text-align: center;
     }
 
     .about-house>div>div>p {
@@ -1243,31 +1253,30 @@ a {
         border-radius: 12px;
     }
 
-    .availability>div>p {
-        font-size: 1em;
-    }
-
-    .availability>div>i {
-        font-size: 1em;
+    .availability>div{
+        font-size: 1.2em;
+        height: 7vh;
+        margin: 1em 0;
     }
 
     .requirements {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    .requirements>div:first-child {
+    .requirements>div:last-child {
         width: 90vw;
         height: auto;
     }
 
-    .requirements>div:first-child>p {
+    .requirements>div:last-child>p {
         font-size: 1em;
+        text-align: center;
     }
 
-    .requirements>div:last-child {
+    .requirements>div:first-child {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1275,7 +1284,7 @@ a {
         height: auto;
     }
 
-    .requirements>div:last-child>i {
+    .requirements>div:first-child>i {
         font-size: 2.5em;
         margin: 1em;
         color: #6FAB87;
@@ -1307,18 +1316,23 @@ a {
         display: flex;
         width: 95vw;
         max-height: 70vh;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: stretch;
-
     }
 
-    .about-house>img {
+    .about-house-img-container {
         width: 40vw;
-        height: auto;
+        height: 35vh;
+        object-fit: cover;
+    }
+
+    .about-house-img-container>img {
+        height: 90%;
+        width: 90%;
         object-fit: contain;
     }
 
-    .about-house>div {
+    .about-house>div:last-child {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -1347,7 +1361,7 @@ a {
 
     .availability {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border: 3px solid #6FAB87;
         border-radius: 12px;
@@ -1374,34 +1388,30 @@ a {
 
     .requirements {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-    }
-
-    .requirements>div:first-child {
-        width: 60vw;
-        height: auto;
     }
 
     .requirements>div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30vw;
+        width: auto;
         height: auto;
+        margin-left: 10%;
+        font-size: 1.1em;
     }
 
-    .requirements>div:last-child>i {
+    .requirements>div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        max-width: 30%;
+    }
+
+    .requirements>div:first-child>i {
         font-size: 3em;
         margin: 1em;
         color: #6FAB87;
-    }
-
-    .map {
-        display: flex;
-        justify-content: center;
-        width: 95vw;
-        height: auto;
     }
 }
 
@@ -1418,9 +1428,20 @@ a {
         display: flex;
         width: 95vw;
         max-height: 70vh;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: stretch;
+    }
 
+    .about-house-img-container {
+        width: 40vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+
+    .about-house-img-container>img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
     }
 
     .about-house>img {
@@ -1429,7 +1450,7 @@ a {
         object-fit: contain;
     }
 
-    .about-house>div {
+    .about-house>div:last-child {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -1474,7 +1495,7 @@ a {
 
     .availability {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border: 3px solid #6FAB87;
         border-radius: 12px;
@@ -1497,46 +1518,31 @@ a {
 
     .requirements {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-    }
-
-    .requirements>div:first-child {
-        width: 60vw;
-        height: auto;
-    }
-
-    .requirements>div:first-child>p {
-        font-size: 1.5em;
     }
 
     .requirements>div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30vw;
+        width: auto;
         height: auto;
+        margin-left: 10%;
+        font-size: 1.5em;
     }
 
-    .requirements>div:last-child>i {
+    .requirements>div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        max-width: 30%;
+    }
+
+    .requirements>div:first-child>i {
         font-size: 3em;
         margin: 1em;
         color: #6FAB87;
     }
-
-    .map {
-        display: flex;
-        justify-content: center;
-        width: 95vw;
-        height: auto;
-    }
-
-    .map>iframe {
-        height: 50vh;
-        width: 50vw;
-    }
-
-    
 }
 
 
@@ -1814,4 +1820,11 @@ a {
         align-self: center;
         margin: 1em 0 1em 0;
     }
+}
+
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }

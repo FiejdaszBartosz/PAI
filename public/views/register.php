@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>REGISTER PAGE</title>
 </head>
 
@@ -39,6 +40,10 @@
                 <div class="input-with-title">
                     <p class="upper-label">Hasło</p>
                     <input class="log-in-input" name="password" type="password">
+                </div>
+                <div class="input-with-title">
+                    <p class="upper-label">Potwierdz haslo</p>
+                    <input class="log-in-input" name="confirmedPassword" type="password">
                 </div>
                 <button class="log-in-button" type="submit">Zarejestruj się</button>
             </form>

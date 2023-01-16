@@ -3,8 +3,8 @@
 use exceptions\UnknownUsersException;
 
 require_once 'Repository.php';
-require_once __DIR__.'/../models/User.php';
-require_once __DIR__.'/../exceptions/UnknownUsersException.php';
+require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../exceptions/UnknownUsersException.php';
 
 class UserRepository extends Repository
 {
@@ -28,7 +28,8 @@ class UserRepository extends Repository
             $user['password'],
             $user['name'],
             $user['surname'],
-            $user['is_admin']
+            $user['is_admin'],
+            $user['id_user']
         );
     }
 }

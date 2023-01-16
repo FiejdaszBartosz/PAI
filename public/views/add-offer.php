@@ -15,9 +15,13 @@
                     <img src="public/img/logo.svg" alt="logo">
                 </div>
                 <div class="nav-links">
-                    <a href="offers">offery</a>
+                    <a href="offers">oferty</a>
                     <a href="addOffer">dodaj ogłoszenie</a>
-                    <a href="login">zaloguj</a>
+                    <?php
+                    if(!isset($_COOKIE['user_name'])) {
+                        echo "<a href='login'>zaloguj</a>";
+                    }
+                    ?>
                 </div>
             </nav>
         </header>
@@ -83,7 +87,7 @@
                     <div class="addImgBox"></div>
                     <input name="file" type="file" placeholder="dodaj zdjecie"></input>
                 </div>
-                <button class="medium-color-button" type="submit", name="submit">Dodaj</button>
+                <button class="medium-color-button" type="submit" name="submit">Dodaj</button>
             </form>
         </div>
     </div>

@@ -7,14 +7,16 @@ class User
     private $name;
     private $surname;
     private $is_admin;
+    private $userId;
 
-    public function __construct(string $email, string $password, string $name, string $surname, bool $is_admin)
+    public function __construct(string $email, string $password, string $name, string $surname, bool $is_admin, int $userId)
     {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
         $this->is_admin = $is_admin;
+        $this->userId = $userId;
     }
 
     public function getEmail(): string
@@ -70,4 +72,13 @@ class User
         $this->is_admin = $is_admin;
     }
 
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    public function setUserId($userId): void
+    {
+        $this->userId = $userId;
+    }
 }

@@ -3,11 +3,14 @@
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/Offer.php';
 require_once __DIR__ . '/../repository/OfferRepository.php';
+require_once __DIR__.'/../repository/UserRepository.php';
+
+use exceptions\UnknownUsersException;
 
 class OfferController extends AppController
 {
     const MAX_FILE_SIZE = 1024 * 1024;
-    const SUPPORTED_TYPES = ['image/png', 'image/jpg'];
+    const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
     private $messages = [];
     private $offerRepository;
@@ -20,22 +23,48 @@ class OfferController extends AppController
 
     public function offers()
     {
-        $offers = $this->offerRepository->getOffers();
+        $offers = $this->offerRepository->getAvailableOffers();
         $this->render('offers', ['offers' => $offers]);
     }
 
-    public function singleOffer()
+    public function offerDetails()
     {
-        $id = $_GET['offer_id'];
-        $offers = $this->offerRepository->getOffer($id);
-        $this->render('offer-details', ['offers' => $offers]);
+        $offerId = $_GET['id'];
+        $offer = $this->offerRepository->getOffer($offerId);
+
+        if (!$this->isPost()) {
+            return $this->render('offer-details', ['offer' => $offer]);
+        }
+
+        if (isset($_POST['submit'])) {
+            if (!isset($_COOKIE['user_name']))
+                return $this->render('login', ['messages' => ['Aby wynrac musisz byc zalogowany']]);
+
+
+            $cookie = $_COOKIE['user_name'];
+
+            $userRepository = new UserRepository();
+            $user = $userRepository->getUser($cookie);
+
+            $userId = $user->getUserId();
+
+            $this->offerRepository->bookOffer($offerId, $userId);
+
+            return $this->render('main-page');
+        }
+
+        return $this->render('offer-details', ['offer' => $offer]);
     }
 
     public function addOffer()
     {
         if (!$this->isPost()) {
-            return $this->render('add-offer', ['messages' => $this->message]);
+            if (isset($_COOKIE['user_name']))
+                return $this->render('add-offer', ['messages' => $this->message]);
+            else
+                return $this->render('login', ['messages' => ['Aby dodac oferte musisz byc zalogowany']]);
         }
+
 
         if (isset($_POST['submit']) && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
 
@@ -68,17 +97,27 @@ class OfferController extends AppController
                 $houseCare = false;
             }
 
-            if ($_POST['availableFrom'] != "") {
-                $availableFrom = DateTime::createFromFormat('d-m-Y', $_POST['availableFrom'])->format('Y-m-d');
+            $availableFromTemp = $_POST['availableFrom'];
+            $availableToTemp = $_POST['availableTo'];
+
+            if ($availableFromTemp != "") {
+                $availableFrom = date($availableFromTemp);
             } else {
-                $availableFrom = DateTime::createFromFormat('d-m-Y', '01-01-2023')->format('Y-m-d');
+                $availableFrom = date('2023-01-01');
             }
 
-            if ($_POST['availableTo'] != "") {
-                $availableTo = DateTime::createFromFormat('d-m-Y', $_POST['availableTo'])->format('Y-m-d');;
+            if ($availableToTemp != "") {
+                $availableTo = date($availableToTemp);
             } else {
-                $availableTo = DateTime::createFromFormat('d-m-Y', '01-01-2023')->format('Y-m-d');;
+                $availableTo = date('2023-01-01');
             }
+
+            $cookie = $_COOKIE['user_name'];
+
+            $userRepository = new UserRepository();
+            $user = $userRepository->getUser($cookie);
+
+            $id = $user->getUserId();
 
             $offer = new Offer(
                 $_POST['title']
@@ -92,7 +131,9 @@ class OfferController extends AppController
                 , $_POST['offerDescription']
                 , $_POST['requirementsDescription']
                 , $_FILES['file']['name']
-                , 1);
+                , $id
+                , -1
+            );
 
             $this->offerRepository->addOffer($offer);
 

@@ -9,11 +9,12 @@ Routing::get('index', 'DefaultController');
 Routing::get('', 'DefaultController');
 //Routing::get('login', 'DefaultController');
 Routing::get('offers', 'OfferController');
-Routing::get('offerDetails', 'DefaultController');
+//Routing::get('offerDetails', 'OfferController');
 Routing::get('profile', 'DefaultController');
 Routing::get('addOffer', 'DefaultController');
 //Routing::get('register', 'DefaultController');
 
+Routing::post('offerDetails', 'OfferController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'RegisterController');
 Routing::post('addOffer', 'OfferController');

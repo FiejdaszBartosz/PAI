@@ -16,7 +16,11 @@
                 <div class="nav-links">
                     <a href="offers">oferty</a>
                     <a href="addOffer">dodaj ogłoszenie</a>
-                    <a href="login">zaloguj</a>
+                    <?php
+                    if(!isset($_COOKIE['user_name'])) {
+                        echo "<a href='login'>zaloguj</a>";
+                    }
+                    ?>
                 </div>
             </nav>
             <div class="basic-info-background">
@@ -28,25 +32,6 @@
                 </section>
             </div>
         </header>
-        <div class="select-date">
-            <form class="dropdown-form">
-                <div class="dropdown-with-title">
-                    <p>Lokalizacja</p>
-                    <input name="lokalizacja" type="text" placeholder="wpisz"></input>
-                </div>
-                <div class="dropdown-with-title">
-                    <p>Termin</p>
-                    <input name="termin" type="text" placeholder="wpisz"></input>
-                </div>
-                <div class="dropdown-with-title">
-                    <p>Opieka nad</p>
-                    <select name="opioekaNad">
-                        <option value=" "></option>
-                    </select>
-                </div>
-                <button class="small-color-button">szukaj</button>
-            </form>
-        </div>
         <section id ="how-it-works" class="how-it-works">
             <h1>Jak to działa?</h1>
             <div class="how-it-works-container">

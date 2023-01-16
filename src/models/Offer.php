@@ -14,6 +14,7 @@ class Offer
     private $requirementsDescription;
     private $image;
     private $userId;
+    private $offerId;
 
     public function __construct(
         $title
@@ -27,7 +28,8 @@ class Offer
         , $offerDescription
         , $requirementsDescription
         , $image
-        , $userId)
+        , $userId
+        , $offerId)
     {
         $this->title = $title;
         $this->localization = $localization;
@@ -41,6 +43,7 @@ class Offer
         $this->requirementsDescription = $requirementsDescription;
         $this->image = $image;
         $this->userId = $userId;
+        $this->offerId = $offerId;
     }
 
     public function getTitle() : string
@@ -115,7 +118,7 @@ class Offer
         $this->houseCare = $houseCare;
     }
 
-    public function getAvailableFrom() : string
+    public function getAvailableFrom() :string
     {
         return $this->availableFrom;
     }
@@ -125,7 +128,7 @@ class Offer
         $this->availableFrom = $availableFrom;
     }
 
-    public function getAvailableTo() : string
+    public function getAvailableTo() :string
     {
         return $this->availableTo;
     }
@@ -173,5 +176,14 @@ class Offer
     public function setUserId(int $userId)
     {
         $this->userId = $userId;
+    }
+    public function getOfferId()
+    {
+        return $this->offerId;
+    }
+
+    public function setOfferId($offerId): void
+    {
+        $this->offerId = $offerId;
     }
 }
