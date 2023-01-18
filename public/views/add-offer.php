@@ -11,9 +11,11 @@
     <div class="container-main-page">
         <header>
             <nav>
-                <div class="logo-nav">
-                    <img src="public/img/logo.svg" alt="logo">
-                </div>
+                <a href="/">
+                    <div class="logo-nav">
+                        <img src="public/img/logo.svg" alt="logo">
+                    </div>
+                </a>
                 <div class="nav-links">
                     <a href="offers">oferty</a>
                     <a href="addOffer">dodaj ogłoszenie</a>

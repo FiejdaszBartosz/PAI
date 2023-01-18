@@ -5,15 +5,18 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/offers.css">
     <script src="https://kit.fontawesome.com/ebcb7e8a33.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>offers</title>
 </head>
 
 <body>
 <div class="container-main-page">
     <nav>
-        <div class="logo-nav">
-            <img src="public/img/logo.svg" alt="logo">
-        </div>
+        <a href="/">
+            <div class="logo-nav">
+                <img src="public/img/logo.svg" alt="logo">
+            </div>
+        </a>
         <div class="nav-links">
             <a href="offers">oferty</a>
             <a href="addOffer">dodaj ogłoszenie</a>
@@ -27,17 +30,7 @@
     <form class="filter">
         <div class="dropdown-with-title">
             <p>Lokalizacja</p>
-            <input name="lokalizacja" type="text" placeholder="wpisz"></input>
-        </div>
-        <div class="dropdown-with-title">
-            <p>Termin</p>
-            <input name="termin" type="text" placeholder="wpisz"></input>
-        </div>
-        <div class="dropdown-with-title">
-            <p>Opieka nad</p>
-            <select name="opioekaNad">
-                <option value=" "></option>
-            </select>
+            <input placeholder="wpisz"></input>
         </div>
     </form>
     <section class="offers">
@@ -89,3 +82,22 @@
 </body>
 
 </html>
+
+<template id="offer-template">
+<div id="">
+    <a href=''>
+    <div class="img-container">
+        <img src="" alt="img">
+    </div>
+    <div>
+        <h1>title</h1>
+        <div class="singleOfferActivities">
+            <i class='fa-solid fa-paw'></i>
+            <i class='fa-solid fa-seedling'></i>
+            <i class='fa-solid fa-broom'></i>
+            <i class='fa-solid fa-house-chimney-user'></i>
+        </div>
+    </div>
+    </a>
+</div>
+</template>

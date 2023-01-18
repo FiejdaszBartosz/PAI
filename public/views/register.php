@@ -10,9 +10,11 @@
 <body>
     <div class="container">
         <div class="left-side">
-            <div class="logo">
-                <img src="public/img/logo.svg" alt="logo">
-            </div>
+            <a href="/">
+                <div class="logo-nav">
+                    <img src="public/img/logo.svg" alt="logo">
+                </div>
+            </a>
         </div>
         <div class="right-side">
             <form class="login-form" action="register" method="POST">
