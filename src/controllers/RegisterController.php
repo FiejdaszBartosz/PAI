@@ -30,7 +30,7 @@ class RegisterController extends AppController
             return $this->render('register', ['messages' => ['Nie wpisano imiona']]);
         } else {
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                return $this->render('register', ['messages' => ['NIepoprawny format imienia']]);
+                return $this->render('register', ['messages' => ['Niepoprawny format imienia']]);
             }
         }
 
@@ -38,7 +38,7 @@ class RegisterController extends AppController
             return $this->render('register', ['messages' => ['Nie wpisano nazwiska']]);
         } else {
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                return $this->render('register', ['messages' => ['NIepoprawny format nazwiska']]);
+                return $this->render('register', ['messages' => ['Niepoprawny format nazwiska']]);
             }
         }
 
@@ -55,6 +55,11 @@ class RegisterController extends AppController
         if (empty($password)) {
             return $this->render('register', ['messages' => ['Nie wpisano hasla']]);
         }
+
+        $userRepository = new UserRepository();
+
+
+        $userRepository->addUser($name, $surname, $email, $this->hashPassword($password));
 
         return $this->render('main-page');
     }

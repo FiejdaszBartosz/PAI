@@ -61,10 +61,11 @@ a {
         border: 1px solid #6FAB87;
         border-radius: 22px;
         background-color: white;
-        width: 8vw;
+        width: 30vw;
         padding: 5px;
         color: #000000;
-        font-size: 100%;
+        font-size: 80%;
+        margin-bottom: 1em;
     }
 
     nav {
@@ -110,10 +111,11 @@ a {
         border: 1px solid #6FAB87;
         border-radius: 22px;
         background-color: white;
-        width: 8vw;
+        width: 16vw;
         padding: 10px;
         color: #000000;
         font-size: 100%;
+        margin-bottom: 1.5em;
     }
 
     nav {
@@ -135,6 +137,18 @@ a {
     nav>div>img {
         height: 80%;
         width: auto;
+    }
+
+    .img-container {
+        width: 40vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+
+    .img-container>img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
     }
 }
 
@@ -167,6 +181,7 @@ a {
         padding: 15px;
         color: #000000;
         font-size: 1.2em;
+        margin-bottom: 1.5em;
     }
 
     nav {
@@ -466,9 +481,15 @@ a {
 
     .logo-nav {
         font-size: 2em;
+        margin-top: 0.5em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 36vw;
     }
 
     .nav-links {
+        margin-top: 1.5em;
         display: flex;
         flex-direction: row;
     }
@@ -576,6 +597,7 @@ a {
         background: #FFFFFF;
         box-shadow: 0px 4px 20px 5px rgba(94, 94, 94, 0.25);
         border-radius: 20px;
+
     }
 
     .user-types>h2 {
@@ -588,11 +610,10 @@ a {
         text-align: center;
         font-weight: 500;
         margin: 1em 2em;
+        font-size: 70%;
     }
 
-    .user-types>img {
-        width: 100%;
-    }
+
 
     .user-types>button {
         width: 80%;
@@ -624,6 +645,22 @@ a {
         font-size: 1em;
         width: 70%;
         text-align: center;
+    }
+
+    .img-container-mainpage {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 1em 1em 0 0;
+    }
+    .img-container-mainpage>img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+
     }
 }
 
@@ -723,6 +760,7 @@ a {
     }
 
     .how-it-works {
+        margin-top: 1.6em;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -744,6 +782,7 @@ a {
         background: #FFFFFF;
         box-shadow: 0px 4px 20px 5px rgba(94, 94, 94, 0.25);
         border-radius: 20px;
+        width: 40vw;
     }
 
     .user-types>h2 {
@@ -758,9 +797,6 @@ a {
         margin: 1em 2em;
     }
 
-    .user-types>img {
-        width: 100%;
-    }
 
     .who-we-are {
         display: flex;
@@ -773,7 +809,7 @@ a {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
+        margin-top: 1.5em;
     }
 
     .who-we-are>h1 {
@@ -788,6 +824,22 @@ a {
         width: 70%;
         text-align: center;
     }
+
+    .img-container-mainpage {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 1em 1em 0 0;
+    }
+    .img-container-mainpage>img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+
+    }
 }
 
 @media (min-width: 1800px) {
@@ -800,9 +852,10 @@ a {
     }
 
     .logo-nav {
-        margin-top: 1em;
+        margin-top: 2.5em;
         position: absolute;
         left: 0;
+        top: 0;
         margin-left: 2.5em;
     }
 
@@ -928,9 +981,7 @@ a {
         font-size: 1.2em;
     }
 
-    .user-types>img {
-        width: 100%;
-    }
+
 
     .who-we-are {
         display: flex;
@@ -943,7 +994,6 @@ a {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
     }
 
     .who-we-are>h1 {
@@ -957,6 +1007,21 @@ a {
         font-size: 1.7em;
         width: 70%;
         text-align: center;
+    }
+
+    .img-container-mainpage {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-radius: 1em 1em 0 0;
+    }
+    .img-container-mainpage>img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
     }
 }
 

@@ -35,8 +35,10 @@ class OfferController extends AppController
             if ($_COOKIE['is_admin'] === '1')
                 return $this->render('offers', ['offers' => $offers]);
             else
-                return $this->render('', ['offers' => $offers]);
+                return $this->render('', []);
         }
+
+        return $this->render('', []);
     }
 
     public function offerDetails()

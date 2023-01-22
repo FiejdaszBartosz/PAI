@@ -39,7 +39,9 @@
                 <h1>Spędz z nami wspaniałe wakacje w zamian za opiekę nad domem</h1>
                 <p>Zwiedzaj świat opiekując się domami, pupilami czy też roślinami nieobecnych właścicieli. Połącz
                     dobry uczynek z chwilami przyjemności i to wszytsko za damo!</p>
-                <button class="medium-color-button">Dowiedz się więcej</button>
+                <a href="#how-it-works">
+                    <button class="medium-color-button">Dowiedz się więcej</button>
+                </a>
             </section>
         </div>
     </header>
@@ -48,19 +50,27 @@
         <div class="how-it-works-container">
             <div class="user-types">
                 <h2>Wystawiający</h2>
-                <img src="public/img/Rectangle 32.png" alt="wystawiający">
+                <div class="img-container-mainpage">
+                    <img src="public/img/Rectangle 32.png" alt="wystawiający">
+                </div>
                 <p>Jedziesz na jakiś wyjazd i martwisz się kto zajmie się twoim domem? Kto wyprowadzi towjego psa? A
                     może nie wiesz kto zadba o twoje roślinki? Użyj Homly! Wystaw swój dom, określ co jest do
                     zrobenia i w jakim terminie i gotowe.</p>
-                <button class="small-button">Załóż konto</button>
+                <a href="register">
+                    <button class="small-button">Załóż konto</button>
+                </a>
             </div>
             <div class="user-types">
                 <h2>Szukający</h2>
-                <img src="public/img/Rectangle 33.png" alt="szukający">
+                <div class="img-container-mainpage">
+                    <img src="public/img/Rectangle 33.png" alt="szukający">
+                </div>
                 <p>Chciałbyś gdzieś wyjechać ale masz ograniczony budżet? Trafiłeś we właściwe miejsce! Homly pomoże
                     ci znaleźć miejsce wzamian za jedynie wykonywanie prostych domowych czynności. Połącz wypoczynek
                     z robieniem czegoś dobrego dla innych. </p>
-                <button class="small-button">Załóż konto</button>
+                <a href="register">
+                    <button class="small-button">Załóż konto</button>
+                </a>
             </div>
         </div>
     </section>

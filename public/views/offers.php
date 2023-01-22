@@ -44,7 +44,7 @@
                         <img src="public/uploads/<? print_r($singleOffer->getImage()); ?>" alt="img">
                     </div>
                     <div>
-                        <h1><? print_r($singleOffer->getTitle()); ?></h1>
+                        <h1 class="title"><? print_r($singleOffer->getTitle()); ?></h1>
                         <div class="singleOfferActivities">
                             <?
                             if ($singleOffer->getAnimals()) {

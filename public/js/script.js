@@ -26,9 +26,10 @@ function validateEmail() {
 function validatePassword() {
     setTimeout(function () {
             const condition = arePasswordsSame(
-                confirmedPasswordInput.previousElementSibling.value,
+                passwordInput.value,
                 confirmedPasswordInput.value
             );
+
             markValidation(confirmedPasswordInput, condition);
             markValidation(passwordInput, condition);
         },

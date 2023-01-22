@@ -37,7 +37,7 @@
                 <button class="log-in-button" type="submit">Zaloguj się</button>
                 <div class="register-with-link">
                     <p>Nie masz konta?</p>
-                    <a href="">Zarejestruj sie</a>
+                    <a href="register">Zarejestruj sie</a>
                 </div>
             </form>
         </div>
