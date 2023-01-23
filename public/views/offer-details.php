@@ -19,8 +19,13 @@
                 <a href="offers">oferty</a>
                 <a href="addOffer">dodaj ogłoszenie</a>
                 <?php
-                if(!isset($_COOKIE['user_name'])) {
+                if (!isset($_COOKIE['user_name'])) {
                     echo "<a href='login'>zaloguj</a>";
+                }
+                ?>
+                <?php
+                if (isset($_COOKIE['user_name'])) {
+                    echo "<a href='' onClick='deleteAllCookies()'>wyloguj</a>";
                 }
                 ?>
             </div>
